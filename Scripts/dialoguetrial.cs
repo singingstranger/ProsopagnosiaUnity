@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/* Online resources I used:
+ * https://forum.unity.com/threads/initialize-serializefield-audioclip-array-items-in-c-code-with-project-url.681469/
+ * https://answers.unity.com/questions/347657/play-audioclip-once-and-switching-clips.html
+ * https://gamedevbeginner.com/how-to-play-audio-in-unity-with-examples/#:~:text=Just%20create%20an%20On%20Click,Easy!*/
+
 public class dialoguetrial : MonoBehaviour
 {
     public Button b1;
@@ -65,7 +70,18 @@ public class dialoguetrial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKey(KeyCode.Y))
+        {
+            Neutral();
+        }
+        if (Input.GetKey(KeyCode.X))
+        {
+            Talk();
+        }
+        if (Input.GetKey(KeyCode.C))
+        {
+            Smile();
+        }
     }
 
     void CloseText()

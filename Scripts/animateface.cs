@@ -50,6 +50,21 @@ public class animateface : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKey(KeyCode.Y))
+        {
+            Neutral();
+        }
+
+        if (Input.GetKey(KeyCode.X))
+        {
+            Talk();
+        }
+
+        if (Input.GetKey(KeyCode.C))
+        {
+            Smile();
+        }
+
         if (emote == 0)// 0 means not talking, just neutral listening
         {
             n = 0;
